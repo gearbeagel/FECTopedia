@@ -4,7 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carous
 
 const FacultyMapCarousel = ({ images }) => {
   return (
-    <Carousel showArrows={true} autoPlay infiniteLoop>
+    <Carousel showArrows={true} autoPlay infiniteLoop className='w-min'>
       {images.map((image, index) => (
         <div key={index}>
           <img src={image} alt={`Map floor ${index + 1}`} className='carousel-image'/>

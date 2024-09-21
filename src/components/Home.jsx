@@ -1,9 +1,10 @@
 import React from 'react';
+import Logo from "../assets/IMG_1430.png"
 
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen p-6 overflow-hidden">
-        <img src='/src/assets/IMG_1430.PNG' className='mb-5'></img>
+        <img src={Logo} className='mb-5'></img>
       <h1 className="text-2xl font-bold mb-4">Ласкаво просимо до FECTопедії!</h1>
       <p className="text-lg text-center mb-6">
         Вітаємо тебе, майбутній першокурснику чи вже студент з багатомісячним стажем! 
