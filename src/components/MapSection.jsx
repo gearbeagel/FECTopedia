@@ -14,7 +14,7 @@ function MapSection() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen p-6 overflow-hidden">
+    <div className="flex flex-col items-center justify-center h-screen p-6 mt-16 overflow-hidden">
       <h1 className='text-3xl'>Ось мапа нашого факультету:</h1>
       <br/>
       <FacultyMapCarousel images={carouselImages} />

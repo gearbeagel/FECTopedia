@@ -78,10 +78,17 @@ p {
 
 @media (max-width: 490px) {
   .article {
-    margin-left: 0;
-    width: 350px;
+    margin-left: -35px;
+    width: 500px;
   }
   .sidebar {
     width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article {
+    margin-left: 200px;
+    min-width: 550px;
   }
 }
