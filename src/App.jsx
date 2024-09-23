@@ -6,9 +6,11 @@ import Navbar from './components/Navbar';
 import HomePage from './components/Home'; 
 import AboutPage from './components/About'; 
 import MapSection from './components/MapSection';
+import ThemeProvider from './context/ThemeContext';
 
 function App() {
   return (
+    <ThemeProvider>
     <Router>
       <div>
         <Navbar />
@@ -20,6 +22,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 

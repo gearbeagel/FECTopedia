@@ -21,7 +21,7 @@ const Article = () => {
   return (
     <div className="flex overflow-y-auto">
       <Sidebar sections={articleData.subsections} handleClick={handleClick} activeSection={activeSection} />
-      <div className="w-3/4 ml-6 p-6 pl-20 mt-10 article">
+      <div className="w-3/4 md:w-1/2 ml-15 p-6 pl-20 mt-10 article">
         <h1 className="text-3xl font-semibold mb-2 mt-5">{currentSubsection.section}</h1>
         {currentSubsection.subsections.map((subsubsection, subsubsectionIdx) => (
           <div key={subsubsectionIdx}>
