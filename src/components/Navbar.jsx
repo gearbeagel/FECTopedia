@@ -1,5 +1,5 @@
 import React from 'react';
-import { InfoCircle, Map, PersonCircle } from 'react-bootstrap-icons'; 
+import { InfoCircle, Map } from 'react-bootstrap-icons'; 
 import logo from '../assets/IMG_1431.png';
 import ThemeChanger from './ThemeChanger';
 
@@ -17,7 +17,7 @@ const Navbar = () => {
           <span className="hidden md:block">Мапа факультету</span>
         </a>
         <a href="/about" className="text-blue-500 hover:text-purple-500 flex items-center mx-2" style={{ textDecoration: "none" }}>
-          <PersonCircle className="block md:hidden" size={20} />
+          <InfoCircle className="block md:hidden" size={20} />
           <span className="hidden md:block">Про авторів</span> 
         </a>
       </div>
