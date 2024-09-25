@@ -5,6 +5,7 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
   const [openSections, setOpenSections] = useState({});
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Toggle to open/close sections in the sidebar
   const toggleSection = (idx) => {
     setOpenSections((prev) => ({
       ...prev,
@@ -12,12 +13,14 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
     }));
   };
 
+  // Toggle to open/close the sidebar on mobile
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <>
+      {/* Mobile toggle button */}
       {!isSidebarOpen && (
         <button
           onClick={toggleSidebar}
@@ -28,10 +31,12 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
         </button>
       )}
 
+      {/* Sidebar with toggle for mobile view */}
       <div
         className={`fixed top-0 left-0 h-screen w-5/6 p-4 z-10 transform transition-transform duration-300 ease-in-out overflow-y-auto 
         ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:w-1/4 md:block sidebar`}
       >
+        {/* Close button on mobile */}
         <button
           onClick={toggleSidebar}
           className="absolute top-20 right-4 dark:text-white light:text-black md:hidden"
@@ -42,9 +47,10 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
         <ul className="mt-16">
           {sections.map((section, idx) => (
             <li key={idx} className="mb-2">
+              {/* Section toggle button */}
               <button
                 onClick={() => toggleSection(idx)}
-                className="text-blue-500 font-semibold flex text-align-start"
+                className="text-blue-500 font-bold flex text-align-start"
               >
                 <span className="mr-2">{openSections[idx] ? "▼" : "►"}</span>
                 {section.title}
@@ -52,7 +58,8 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
               {openSections[idx] && (
                 <ul className="ml-2 mt-2 text-align-start">
                   {section.subsections.map((sub, subIdx) => (
-                    <li key={subIdx} className="mb-2 text-align-start">
+                    <li key={subIdx} className="mb-2 text-align-start font-semibold">
+                      {/* Subsection button */}
                       <button
                         onClick={() => handleClick(idx, subIdx)}
                         className={`text-blue-300 ${
@@ -64,9 +71,10 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
                       >
                         {sub.section}
                       </button>
-                      <ul className="ml-2 mt-2 text-align-start">
+                      <ul className="ml-8 mt-2 text-align-start list-disc text-blue-200">
                         {sub.subsections.map((subsub, subsubIdx) => (
-                          <li key={subsubIdx} className="mb-2 text-align-start">
+                          <li key={subsubIdx} className="mb-2 text-align-start font-normal">
+                            {/* Subsubsection button */}
                             <button
                               onClick={() =>
                                 handleClick(idx, subIdx, subsubIdx)
@@ -93,6 +101,7 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
         </ul>
       </div>
 
+      {/* Overlay when sidebar is open on mobile */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-0 md:hidden"

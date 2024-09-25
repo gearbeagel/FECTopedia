@@ -11,14 +11,24 @@ const Article = () => {
 
   const handleClick = (sectionIdx, subsectionIdx = 0, subsubsectionIdx = 0) => {
     setActiveSection({ sectionIdx, subsectionIdx, subsubsectionIdx });
-    const id = `subsubsection-${sectionIdx}-${subsectionIdx}-${subsubsectionIdx}`;
-    const element = document.getElementById(id);
     
+    // Handle scroll for section title
+    let id;
+    if (subsubsectionIdx === 0 && subsectionIdx === 0) {
+      id = `section-${sectionIdx}`; // For section title
+    } else if (subsubsectionIdx === 0) {
+      id = `subsection-${sectionIdx}-${subsectionIdx}`; // For subsection
+    } else {
+      id = `subsubsection-${sectionIdx}-${subsectionIdx}-${subsubsectionIdx}`; // For subsubsection
+    }
+    
+    const element = document.getElementById(id);
+
     if (element) {
       const navbarHeight = document.querySelector('nav')?.offsetHeight || 70; 
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
-        top: elementPosition - navbarHeight - 10, 
+        top: elementPosition - navbarHeight - 10,
         behavior: 'smooth',
       });
     }
@@ -45,7 +55,10 @@ const Article = () => {
         activeSection={activeSection}
       />
       <div className="w-1/6 md:w-1/2 ml-15 p-6 pl-20 mt-10 article">
-        <h1 className="text-3xl font-semibold mb-2 mt-5">
+        <h1
+          id={`section-${activeSection.sectionIdx}`} // Add ID to section title for scrolling
+          className="text-3xl font-semibold mb-2 mt-5"
+        >
           {currentSubsection.section}
         </h1>
         {currentSubsection.subsections.map((subsubsection, subsubsectionIdx) => (
