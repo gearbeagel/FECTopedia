@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-light {
+.light {
   --bg-color: rgb(253, 249, 249); 
   --text-color: black;
   --sidebar-bg-color: rgb(253, 244, 244); 
