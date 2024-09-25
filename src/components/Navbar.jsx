@@ -14,7 +14,7 @@ const Navbar = () => {
         <ThemeChanger />
         <a href="/map" className="text-blue-500 hover:text-purple-500 flex items-center mx-2" style={{ textDecoration: "none" }}>
           <Map className="block md:hidden" size={20} /> 
-          <span className="hidden md:block">Карта факультету</span>
+          <span className="hidden md:block">Мапа факультету</span>
         </a>
         <a href="/about" className="text-blue-500 hover:text-purple-500 flex items-center mx-2" style={{ textDecoration: "none" }}>
           <PersonCircle className="block md:hidden" size={20} />
