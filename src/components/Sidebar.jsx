@@ -34,10 +34,9 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 md:w-1/4 md:block sidebar`}
       >
-        {/* Close button for mobile only - placed in the top right of the sidebar */}
         <button
           onClick={toggleSidebar}
-          className="absolute top-20 right-4 text-white md:hidden"
+          className="absolute top-20 right-4 dark:text-white light:text-black md:hidden"
         >
           <X size={24} />
         </button>
@@ -47,15 +46,15 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
             <li key={idx} className="mb-2">
               <button
                 onClick={() => toggleSection(idx)}
-                className="text-blue-500 font-semibold flex items-center"
+                className="text-blue-500 font-semibold flex text-align-start"
               >
                 <span className="mr-2">{openSections[idx] ? "▼" : "►"}</span>
                 {section.title}
               </button>
               {openSections[idx] && (
-                <ul className="ml-4 mt-2">
+                <ul className="ml-2 mt-2 text-align-start">
                   {section.subsections.map((sub, subIdx) => (
-                    <li key={subIdx} className="mb-2">
+                    <li key={subIdx} className="mb-2 text-align-start">
                       <button
                         onClick={() => handleClick(idx, subIdx)}
                         className={`text-blue-300 ${
