@@ -21,7 +21,7 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
       {!isSidebarOpen && (
         <button
           onClick={toggleSidebar}
-          className="fixed left-4 z-20 p-2 rounded-md bg-purple-500 hover:bg-purple-600 text-white transition duration-300 block md:hidden transition-transform duration-300 ease-in-out "
+          className="fixed left-4 z-20 p-2 rounded-md bg-purple-500 hover:bg-purple-600 text-white transition duration-300 block md:hidden transition-transform duration-300 ease-in-out"
           style={{ top: "16px" }}
         >
           <List size={24} />
@@ -29,10 +29,8 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
       )}
 
       <div
-        className={`fixed top-0 left-0 h-screen w-3/4 p-4 z-10 transform transition-transform duration-300 ease-in-out 
-        ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 md:w-1/4 md:block sidebar`}
+        className={`fixed top-0 left-0 h-screen w-5/6 p-4 z-10 transform transition-transform duration-300 ease-in-out overflow-y-auto 
+        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:w-1/4 md:block sidebar`}
       >
         <button
           onClick={toggleSidebar}
@@ -66,6 +64,26 @@ const Sidebar = ({ sections = [], handleClick, activeSection }) => {
                       >
                         {sub.section}
                       </button>
+                      <ul className="ml-2 mt-2 text-align-start">
+                        {sub.subsections.map((subsub, subsubIdx) => (
+                          <li key={subsubIdx} className="mb-2 text-align-start">
+                            <button
+                              onClick={() =>
+                                handleClick(idx, subIdx, subsubIdx)
+                              }
+                              className={`text-blue-200 ${
+                                activeSection.subsubsectionIdx === subsubIdx &&
+                                activeSection.subsectionIdx === subIdx &&
+                                activeSection.sectionIdx === idx
+                                  ? "highlight"
+                                  : ""
+                              }`}
+                            >
+                              {subsub.subsection}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
                   ))}
                 </ul>

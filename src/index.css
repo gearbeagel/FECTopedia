@@ -35,7 +35,7 @@ body {
    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.text-blue-500, .text-blue-400, .text-blue-300 {
+.text-blue-500, .text-blue-400, .text-blue-300, .text-blue-200 {
   color: var(--purple-text)
 }
 
