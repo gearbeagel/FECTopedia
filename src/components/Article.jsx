@@ -12,14 +12,13 @@ const Article = () => {
   const handleClick = (sectionIdx, subsectionIdx = 0, subsubsectionIdx = 0) => {
     setActiveSection({ sectionIdx, subsectionIdx, subsubsectionIdx });
     
-    // Handle scroll for section title
     let id;
     if (subsubsectionIdx === 0 && subsectionIdx === 0) {
-      id = `section-${sectionIdx}`; // For section title
+      id = `section-${sectionIdx}`;
     } else if (subsubsectionIdx === 0) {
-      id = `subsection-${sectionIdx}-${subsectionIdx}`; // For subsection
+      id = `subsection-${sectionIdx}-${subsectionIdx}`; 
     } else {
-      id = `subsubsection-${sectionIdx}-${subsectionIdx}-${subsubsectionIdx}`; // For subsubsection
+      id = `subsubsection-${sectionIdx}-${subsectionIdx}-${subsubsectionIdx}`; 
     }
     
     const element = document.getElementById(id);

@@ -1,13 +1,12 @@
 import React from 'react';
 import { InfoCircle, Map } from 'react-bootstrap-icons'; 
-import logo from '../assets/IMG_1431.png';
 import ThemeChanger from './ThemeChanger';
 
 const Navbar = () => {
   return (
     <nav className="p-4 flex items-center w-screen md:w-full fixed top-0 justify-between navbar bg-white z-20">
       <div className="flex items-center">
-        <img src={logo} alt="Logo" className="h-10 mr-4" />
+        <img src="/IMG_1431.png" alt="Logo" className="h-10 mr-4" />
         <span className="text-blue-500 text-xl"><a href="/info" style={{ textDecoration: "none" }}>FECTопедія</a></span>
       </div>
       <div className="flex space-x-4 mr-3">

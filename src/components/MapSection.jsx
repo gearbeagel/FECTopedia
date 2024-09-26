@@ -1,22 +1,18 @@
 import React from 'react';
 import FacultyMapCarousel from './MapCarousel';
-import floor1 from '../assets/1_floor.jpg';
-import floor2 from '../assets/2_floor.jpg';
-import floor3 from '../assets/3_floor.jpg';
-import floor4 from '../assets/4_floor.jpg';
 
 function MapSection() {
   const carouselImages = [
-    floor1,
-    floor2,
-    floor3,
-    floor4,
+    '/1_floor.jpg',
+    '/2_floor.jpg',
+    '/3_floor.jpg',
+    '/4_floor.jpg',
   ];
 
   return (
     <div className="flex flex-col items-center justify-center h-screen p-6 mt-16 overflow-hidden">
-      <h1 className='text-3xl'>Ось мапа нашого факультету:</h1>
-      <br/>
+      <h1 className="text-3xl">Ось мапа нашого факультету:</h1>
+      <br />
       <FacultyMapCarousel images={carouselImages} />
     </div>
   );
