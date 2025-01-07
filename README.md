@@ -1,8 +1,18 @@
-# React + Vite
+# FECTопедія
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Про проект
+FECTопедія є путівником студента на факультеті електроніки та комп'ютерних технологій ЛНУ ім. Івана Франка. Студент — чи то першокурсник бакалавру, чи то ветеран-магістр — може прочитати будь-яку потрібну інформацію про навчання в університеті.
 
-Currently, two official plugins are available:
+## Стек
+Фронтенд — React, Tailwind.
+Гостинг — Vercel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Автори проекту
+
+-   **Автор ідеї:**  Фанда Максим
+-   **Головна редакторка та голова інформаційного відділу:**  Роман Анастасія
+-   **Член інформаційного відділу, розробниця сайту:**  Кондрацька Вікторія
+-   **Член інформаційного відділу:**  Аксьонова Єлизавета
+-   **Член дизайнерського відділу:**  Філь Дарина
+-   **Упорядник:**  Фіняк Олег
+-   **Волонтери:**  Романюк Вадим, Панчишин Ольга, Погончук Назар
