@@ -55,7 +55,7 @@ const Article = () => {
       />
       <div className="w-1/6 md:w-1/2 ml-15 p-6 pl-20 mt-10 article">
         <h1
-          id={`section-${activeSection.sectionIdx}`} // Add ID to section title for scrolling
+          id={`section-${activeSection.sectionIdx}`} 
           className="text-3xl font-semibold mb-2 mt-5"
         >
           {currentSubsection.section}
